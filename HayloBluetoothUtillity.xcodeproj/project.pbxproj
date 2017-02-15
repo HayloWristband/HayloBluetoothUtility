@@ -12,6 +12,7 @@
 		157C6F701E35B96000CEEB4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157C6F6E1E35B96000CEEB4C /* Main.storyboard */; };
 		157C6F721E35B96000CEEB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157C6F711E35B96000CEEB4C /* Assets.xcassets */; };
 		157C6F751E35B96000CEEB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157C6F731E35B96000CEEB4C /* LaunchScreen.storyboard */; };
+		157C6F7E1E35BA0E00CEEB4C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C6F7D1E35BA0E00CEEB4C /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		157C6F711E35B96000CEEB4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		157C6F741E35B96000CEEB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		157C6F761E35B96000CEEB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		157C6F7D1E35BA0E00CEEB4C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				157C6F7E1E35BA0E00CEEB4C /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				157C6F691E35B96000CEEB4C /* HayloBluetoothUtillity */,
 				157C6F681E35B96000CEEB4C /* Products */,
+				157C6F7C1E35BA0D00CEEB4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				157C6F761E35B96000CEEB4C /* Info.plist */,
 			);
 			path = HayloBluetoothUtillity;
+			sourceTree = "<group>";
+		};
+		157C6F7C1E35BA0D00CEEB4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				157C6F7D1E35BA0E00CEEB4C /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,9 +276,10 @@
 				DEVELOPMENT_TEAM = 3HTQ3XN55R;
 				INFOPLIST_FILE = HayloBluetoothUtillity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = band.haylo.HayloBluetoothUtillity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moonbase.haylo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -277,9 +290,10 @@
 				DEVELOPMENT_TEAM = 3HTQ3XN55R;
 				INFOPLIST_FILE = HayloBluetoothUtillity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = band.haylo.HayloBluetoothUtillity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moonbase.haylo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -302,6 +316,7 @@
 				157C6F7B1E35B96000CEEB4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

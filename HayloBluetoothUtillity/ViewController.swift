@@ -7,19 +7,68 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CBCentralManagerDelegate {
+    
+    private var centralManager: CBCentralManager?
+    @IBOutlet weak var textView: UITextView!
+    
+    var discoveredPeripherals: [CBPeripheral] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+  
+        
+        centralManager = CBCentralManager(delegate: self, queue: nil)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK - CBCentralManagerDelegate
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        if (central.state == .poweredOn) {
+            print("CBCentralManager Powered On")
+            let options: [String: Any] = [CBCentralManagerScanOptionAllowDuplicatesKey : false]
+            centralManager?.scanForPeripherals(withServices: nil, options: options)
+        }
+        else if (central.state == .poweredOff) {
+            print("CBCentralManager Powered Off")
+        }
+        else if (central.state == .resetting) {
+            print("CBCentralManager Resetting")
+        }
+        else if (central.state == .unauthorized) {
+            print("CBCentralManager Unauthorized")
+        }
+        else if (central.state == .unknown) {
+            print("CBCentralManager Unknown")
+        }
+        else if (central.state == .unsupported) {
+            print("CBCentralManager Unsupported")
+        }
+        
     }
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        
+        
+    }
+    
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        
+        if !discoveredPeripherals.contains(peripheral) {
+            discoveredPeripherals.append(peripheral)
+            
+            var oldText = ""
+            if (textView.text != nil) {
+                oldText = textView.text!
+            }
+            oldText += "\n"
+            oldText += peripheral.description
+            textView.text = oldText
 
+        }
+    }
 
 }
 

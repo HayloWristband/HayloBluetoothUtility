@@ -13,6 +13,8 @@
 		157C6F721E35B96000CEEB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157C6F711E35B96000CEEB4C /* Assets.xcassets */; };
 		157C6F751E35B96000CEEB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157C6F731E35B96000CEEB4C /* LaunchScreen.storyboard */; };
 		157C6F7E1E35BA0E00CEEB4C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157C6F7D1E35BA0E00CEEB4C /* CoreBluetooth.framework */; };
+		FB1615191E540DA400878818 /* HAYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1615181E540DA400878818 /* HAYConstants.swift */; };
+		FB2704A91E53F22500DE1B5B /* HAYBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2704A81E53F22500DE1B5B /* HAYBluetoothManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		157C6F741E35B96000CEEB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		157C6F761E35B96000CEEB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		157C6F7D1E35BA0E00CEEB4C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		FB1615181E540DA400878818 /* HAYConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HAYConstants.swift; path = HayloBluetoothUtillity/HAYConstants.swift; sourceTree = "<group>"; };
+		FB2704A81E53F22500DE1B5B /* HAYBluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HAYBluetoothManager.swift; path = Managers/HAYBluetoothManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 		157C6F5E1E35B96000CEEB4C = {
 			isa = PBXGroup;
 			children = (
+				FB1615181E540DA400878818 /* HAYConstants.swift */,
 				157C6F691E35B96000CEEB4C /* HayloBluetoothUtillity */,
 				157C6F681E35B96000CEEB4C /* Products */,
 				157C6F7C1E35BA0D00CEEB4C /* Frameworks */,
@@ -60,6 +65,7 @@
 			children = (
 				157C6F6A1E35B96000CEEB4C /* AppDelegate.swift */,
 				157C6F6C1E35B96000CEEB4C /* ViewController.swift */,
+				FB2704A81E53F22500DE1B5B /* HAYBluetoothManager.swift */,
 				157C6F6E1E35B96000CEEB4C /* Main.storyboard */,
 				157C6F711E35B96000CEEB4C /* Assets.xcassets */,
 				157C6F731E35B96000CEEB4C /* LaunchScreen.storyboard */,
@@ -109,7 +115,7 @@
 					157C6F661E35B96000CEEB4C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3HTQ3XN55R;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -149,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1615191E540DA400878818 /* HAYConstants.swift in Sources */,
 				157C6F6D1E35B96000CEEB4C /* ViewController.swift in Sources */,
+				FB2704A91E53F22500DE1B5B /* HAYBluetoothManager.swift in Sources */,
 				157C6F6B1E35B96000CEEB4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +286,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moonbase.haylo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "71be48d7-6f24-4f2a-870f-67de1687445f";
+				PROVISIONING_PROFILE_SPECIFIER = HayloProfile;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -292,6 +302,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moonbase.haylo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "71be48d7-6f24-4f2a-870f-67de1687445f";
+				PROVISIONING_PROFILE_SPECIFIER = HayloProfile;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
